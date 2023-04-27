@@ -38,7 +38,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label h4">รหัสผ่าน</label>
-                        <input class="form-control" type="text" name="password">
+                        <input class="form-control" type="password" name="password">
                     </div>
                     <div class="mb-3">
                         <input type="submit" class="btn btn-primary" name="submit" value="เข้าสู่ระบบ">
