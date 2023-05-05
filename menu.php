@@ -64,7 +64,7 @@ div.content {
 
 <div class="sidebar">
   <a href="manage.php">รายการสินค้า</a>
-  <a href="#news">เบิกสินค้า</a>
+  <a href="pickup.php">เบิกสินค้า</a>
   <a href="index.php?logout=1" class="btn btn-danger btn-sm" >logout</a>
 </div>
 

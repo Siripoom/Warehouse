@@ -2,6 +2,13 @@
 session_start();
 include('server.php');
 
+echo '
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    ';
+
+
 $errors = array();
 
 if (isset($_POST['submit'])) {
@@ -23,8 +30,20 @@ if (isset($_POST['submit'])) {
 
         if (mysqli_num_rows($result) == 1) {
             $_SESSION['username'] = $username;
-            header("location: manage.php");
-        }else {
+            echo '
+        <script>
+        setTimeout(function() {
+        swal({
+                title: "Login success",
+                text: "",
+                type: "success"
+            }, function() {
+            window.location = "manage.php";
+        });
+        }, 1000);
+    </script>
+        ';
+        } else {
             array_push($errors, "Wrong Username or Password");
             $_SESSION['error'] = "Wrong Username or Password!";
             header("location: index.php");
